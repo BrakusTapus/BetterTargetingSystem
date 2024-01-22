@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Authors></Authors>
+    <Authors>Kirbo</Authors>
     <Company></Company>
-    <Version>1.0.0.1</Version>
-    <Description>Better Targeting System</Description>
+    <Version>1.0.0.2</Version>
+    <Description>Better Targeting System PvP</Description>
     <Copyright></Copyright>
-    <PackageProjectUrl>https://github.com/Lynesth/BetterTargetingSystem</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/BrakusTapus/BetterTargetingSystem</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup>
