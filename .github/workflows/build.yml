@@ -10,7 +10,7 @@ on:
 
 env:
   PLUGIN_REPO: BrakusTapus/PluginHUB
-  PROJECT_NAME: BetterTargetingSystem
+  PROJECT_NAME: BetterTargetingSystemPvP
 
 jobs:
   build:
