@@ -1,14 +1,8 @@
-using Dalamud.Game;
-using Dalamud.Game.ClientState;
-using Dalamud.Game.ClientState.Conditions;
-using Dalamud.Game.ClientState.Keys;
 using Dalamud.Game.ClientState.Objects;
 using Dalamud.Game.ClientState.Objects.Enums;
 using Dalamud.Game.Command;
-using Dalamud.Game.Gui;
 using Dalamud.Interface.Windowing;
 using Dalamud.IoC;
-using Dalamud.Logging;
 using Dalamud.Plugin;
 using Dalamud.Utility.Signatures;
 using FFXIVClientStructs.FFXIV.Client.Game.Event;
@@ -18,15 +12,11 @@ using BetterTargetingSystem.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-
 using Dalamud.Plugin.Services;
-
 using DalamudCharacter = Dalamud.Game.ClientState.Objects.Types.Character;
 using DalamudGameObject = Dalamud.Game.ClientState.Objects.Types.GameObject;
 using ObjectKind = Dalamud.Game.ClientState.Objects.Enums.ObjectKind;
 using GameObject = FFXIVClientStructs.FFXIV.Client.Game.Object.GameObject;
-using FFXIVClientStructs.FFXIV.Client.System.Framework;
 
 namespace BetterTargetingSystem;
 
