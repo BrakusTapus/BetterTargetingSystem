@@ -2,25 +2,27 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Common.Component.BGCollision;
 using System;
 using System.Numerics;
-using DalamudGameObject = Dalamud.Game.ClientState.Objects.Types.GameObject;
+using DalamudGameObject = Dalamud.Game.ClientState.Objects.Types.IGameObject;
 using GameObject = FFXIVClientStructs.FFXIV.Client.Game.Object.GameObject;
 using CameraManager = FFXIVClientStructs.FFXIV.Client.Graphics.Scene.CameraManager;
 using CSFramework = FFXIVClientStructs.FFXIV.Client.System.Framework.Framework;
 using System.Collections.Generic;
+using Dalamud.Game.ClientState.Objects.Types;
+using Dalamud.Game.ClientState.Objects.SubKinds;
 
 namespace BetterTargetingSystem;
 
 public unsafe class Utils
 {
-    private static RaptureAtkModule* RaptureAtkModule => CSFramework.Instance()->GetUiModule()->GetRaptureAtkModule();
+    private static RaptureAtkModule* RaptureAtkModule => CSFramework.Instance()->GetUIModule()->GetRaptureAtkModule();
     internal static bool IsTextInputActive => RaptureAtkModule->AtkModule.IsTextInputActive();
 
-    internal static bool CanAttack(DalamudGameObject obj)
+    internal static bool CanAttack(IGameObject obj)
     {
         return Plugin.CanAttackFunction?.Invoke(142, obj.Address) == 1;
     }
 
-    internal static float DistanceBetweenObjects(DalamudGameObject source, DalamudGameObject target)
+    internal static float DistanceBetweenObjects(IGameObject source, IGameObject target)
     {
         return DistanceBetweenObjects(source.Position, target.Position, target.HitboxRadius);
     }
@@ -89,7 +91,7 @@ public unsafe class Utils
 
         RaycastHit hit;
         var flags = stackalloc int[] { 0x4000, 0, 0x4000, 0 };
-        var isLoSBlocked = CSFramework.Instance()->BGCollisionModule->RaycastEx(&hit, sourcePos, direction, distance, 1, flags);
+        var isLoSBlocked = CSFramework.Instance()->BGCollisionModule->RaycastMaterialFilter(&hit, sourcePos, direction, distance, 1, flags);
 
         return isLoSBlocked == false;
     }

@@ -34,7 +34,7 @@ public class HelpWindow : Window, IDisposable
         ImGui.Text("\nThe plugin will not target enemies you cannot interact with, such as those in another party's levequest / treasure hunt and will also try its best to not change the order in which enemies are cycled through (can probably be improved).");
         ImGui.Text("It also adds an extra keybind to target the lowest (absolute) health enemy as well as a keybind to target the \"best\" enemy for targeted aoes.");
         ImGui.Text("You can use /bts to configure the keybinds used by this plugin as well as the angles and ranges of the cones and circle used to cycle between targets.");
-        ImGui.TextColored(new Vector4(255, 0, 0, 255), "\nThis plugin is disabled in PvP.");
+        //ImGui.TextColored(new Vector4(255, 0, 0, 255), "\nThis plugin is disabled in PvP.");
         ImGui.Text("\nDo not hesitate to give feedback/suggestion and submit bug reports on the Github repository.");
         ImGui.Text("\n* Yes, TAB will now target those huge bosses without having to reorient the camera to get the center of their model in view\n(DPS players might not understand why this is an issue).\n\n\n");
         ImGui.Unindent();

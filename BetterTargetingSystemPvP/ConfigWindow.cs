@@ -24,7 +24,7 @@ namespace BetterTargetingSystem.Windows
             ImGuiWindowFlags.AlwaysAutoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse)
         {
             this.Size = new Vector2(185, 270);
-            this.SizeCondition = ImGuiCond.Appearing;
+            this.SizeCondition = ImGuiCond.Appearing; 
 
             this.Plugin = plugin;
             this.Configuration = plugin.Configuration;
@@ -42,11 +42,11 @@ namespace BetterTargetingSystem.Windows
                     KeybindsConfig();
                     ImGui.EndTabItem();
                 }
-                if (ImGui.BeginTabItem("Settings-Debug"))
-                {
-                    SettingsConfig();
-                    ImGui.EndTabItem();
-                }
+                //if (ImGui.BeginTabItem("Settings-Debug"))
+                //{
+                //    SettingsConfig();
+                //    ImGui.EndTabItem();
+                //}
                 ImGui.EndTabBar();
             }
         }

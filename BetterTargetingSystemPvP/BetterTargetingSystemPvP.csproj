@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Authors>Kirbo</Authors>
     <Company></Company>
-    <Version>1.0.0.5</Version>
+    <Version>1.0.0.6</Version>
     <Description>Better Targeting System PvP</Description>
     <Copyright></Copyright>
     <PackageProjectUrl>https://github.com/BrakusTapus/BetterTargetingSystemPvP</PackageProjectUrl>
@@ -35,7 +35,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DalamudPackager" Version="2.1.12" />
+    <PackageReference Include="DalamudPackager" Version="2.1.13" />
     <Reference Include="FFXIVClientStructs">
       <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
       <Private>false</Private>
