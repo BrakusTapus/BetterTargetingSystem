@@ -8,7 +8,6 @@ using CameraManager = FFXIVClientStructs.FFXIV.Client.Graphics.Scene.CameraManag
 using CSFramework = FFXIVClientStructs.FFXIV.Client.System.Framework.Framework;
 using System.Collections.Generic;
 using Dalamud.Game.ClientState.Objects.Types;
-using Dalamud.Game.ClientState.Objects.SubKinds;
 
 namespace BetterTargetingSystem;
 
